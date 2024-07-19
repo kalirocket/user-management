@@ -12,6 +12,11 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::get('/signup', [SignupController::class, 'index'])->name('signup');
 Route::post('/signup', [SignupController::class, 'signup']);
 
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+Route::get('/test', [LoginController::class, 'test'])->name('test');
