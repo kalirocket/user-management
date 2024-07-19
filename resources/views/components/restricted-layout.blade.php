@@ -3,6 +3,5 @@
 ])
 
 <x-shell title="{{ $title }}">
-    <x-navbar />
     {{ $slot }}
 </x-shell>

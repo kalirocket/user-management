@@ -18,11 +18,6 @@ class LoginController extends Controller
         return view('auth.login');
     }
 
-    public function test()
-    {
-        return view('dashboard.index');
-    }
-
     public function login(LoginRequest $request)
     {
 
