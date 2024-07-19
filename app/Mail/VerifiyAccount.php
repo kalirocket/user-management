@@ -70,21 +70,6 @@ class VerifiyAccount extends Mailable
             with: ['action_url' => $this->action_url],
         );
     }
-
-    /**
-     * Get the attachments for the message...
-     *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
-     */
-    public function attachments(): array
-    {
-        return [
-            Attachment::fromPath('https://mailtrap.io/wp-content/uploads/2021/04/mailtrap-new-logo.svg')
-                ->as('logo.svg')
-                ->withMime('image/svg+xml'),
-        ];
-    }
-
     /**
      * Get the message headers.
      */
